@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KütüphaneDataSet" targetNamespace="http://tempuri.org/KütüphaneDataSet.xsd" xmlns:mstns="http://tempuri.org/KütüphaneDataSet.xsd" xmlns="http://tempuri.org/KütüphaneDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="KütüphaneConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KütüphaneConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KütüphaneOtomasyonu.Properties.Settings.GlobalReference.Default.KütüphaneConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GirişTableAdapter" GeneratorDataComponentClassName="GirişTableAdapter" Name="Giriş" UserDataComponentName="GirişTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KütüphaneConnectionString (Settings)" DbObjectName="Kütüphane.dbo.Giriş" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Kullanıcı, Ad, Soyad FROM dbo.Giriş</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Kullanıcı" DataSetColumn="Kullanıcı" />
+              <Mapping SourceColumn="Ad" DataSetColumn="Ad" />
+              <Mapping SourceColumn="Soyad" DataSetColumn="Soyad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="KütüphaneDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="KütüphaneDataSet" msprop:Generator_UserDSName="KütüphaneDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Giriş" msprop:Generator_TableClassName="GirişDataTable" msprop:Generator_TableVarName="tableGiriş" msprop:Generator_TablePropName="Giriş" msprop:Generator_RowDeletingName="GirişRowDeleting" msprop:Generator_RowChangingName="GirişRowChanging" msprop:Generator_RowEvHandlerName="GirişRowChangeEventHandler" msprop:Generator_RowDeletedName="GirişRowDeleted" msprop:Generator_UserTableName="Giriş" msprop:Generator_RowChangedName="GirişRowChanged" msprop:Generator_RowEvArgName="GirişRowChangeEvent" msprop:Generator_RowClassName="GirişRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Kullanıcı" msprop:Generator_ColumnVarNameInTable="columnKullanıcı" msprop:Generator_ColumnPropNameInRow="Kullanıcı" msprop:Generator_ColumnPropNameInTable="KullanıcıColumn" msprop:Generator_UserColumnName="Kullanıcı">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ad" msprop:Generator_ColumnVarNameInTable="columnAd" msprop:Generator_ColumnPropNameInRow="Ad" msprop:Generator_ColumnPropNameInTable="AdColumn" msprop:Generator_UserColumnName="Ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Soyad" msprop:Generator_ColumnVarNameInTable="columnSoyad" msprop:Generator_ColumnPropNameInRow="Soyad" msprop:Generator_ColumnPropNameInTable="SoyadColumn" msprop:Generator_UserColumnName="Soyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
